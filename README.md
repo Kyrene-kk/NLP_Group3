@@ -16,7 +16,7 @@ Group3_Machine_Generated_Text_Detection.ipynb: Ensemble the results from differe
 python3 baseline/transformer_baseline.py --train_file_path data/subtaskA_train_multilingual.jsonl --test_file_path data/subtaskA_test_multilingual.jsonl --prediction_file_path predictions/roberta_test_predictions_probs.jsonl --subtask A --model 'xlm-roberta-base'
 
 #fine-tune Mistral-7B, Llama-7B or Falcon-7B
-python3 baseline/transformer_peft.py --train_file_path data/subtaskA_train_multilingual.jsonl --test_file_path data/subtaskA_test_multilingual.jsonl --prediction_file_path predictions/roberta_test_predictions_probs.jsonl --subtask A --model 'mistralai/Mistral-7B-v0.1'
+python3 baseline/transformer_peft.py --train_file_path data/subtaskA_train_multilingual.jsonl --test_file_path data/subtaskA_test_multilingual.jsonl --prediction_file_path predictions/mistral_test_predictions_probs.jsonl --subtask A --model 'mistralai/Mistral-7B-v0.1'
 ```
 3. For system-based method, use the provided jupyter notebook with the files from the prediction directory to generate the quantitative results.
 ## Parameters setting for fine-tuning with lora
